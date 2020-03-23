@@ -1,0 +1,10 @@
+@mixin header-position {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin header {
+    font-size: 40px;
+    color: $main-color;
+    font-weight: unset;
+}
