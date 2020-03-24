@@ -54,6 +54,7 @@
     -webkit-box-shadow: 0px -9px 17px -3px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px -9px 17px -3px rgba(0,0,0,0.75);
     box-shadow: 0px -9px 17px -3px rgba(0,0,0,0.75);
+    background-color: white;
 }
 
 .body-container {
@@ -89,6 +90,10 @@
 .description {
     font-size: 1.2em;
     padding: 0px 25px;
+}
+
+.services {
+    background-color: white;
 }
 
 .card-wrapper {
@@ -179,12 +184,10 @@
 
 }
 
-.social-media {
-    
-}
+
 
 .social-media i{
-    font-size: 2.5em;
+    font-size: 2em;
     color: rgb(219, 220, 230);
     text-shadow: 4px 4px 4px black;
     margin: 0px 15px;
@@ -223,6 +226,34 @@
     }
   }
 
+  @media only screen and (max-width: 608px) {
+    .title h1 {
+        font-size: 35px;
+    }
+    .card p {
+        font-size: 0.9em;
+    }
+    .brand {
+        font-size: 1em;
+    }
+    .description {
+        font-size: 0.9em;
+    }
+  }
+
+  @media screen and (max-height: 817px) {
+    .logo img {
+        top: 100px;
+    }
+  }
+
+  @media screen and (max-height: 561px) {
+    .logo img {
+        top: 50px;
+        width: 250px;
+    }
+  }
+
   .contact {
       display: none;
       position: fixed;
@@ -257,4 +288,127 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .contact-container{
+      height: 80vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+
+  }
+
+  .form-item {
+      width: 100%;
+      position: relative;
+      height: 50px;
+      overflow: hidden;
+  }
+
+  .form-item input {
+      width: 100%;
+      height: 100%;
+      color: #595f66;
+      padding-top: 20px;
+      border: none;
+      outline: none;
+  }
+
+  .form-item label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+  }
+
+  .form-item label::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #5fa8d3;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .content-name {
+      position: absolute;
+      bottom: 5px;
+      left: 0px;
+      transition: all 0.3s ease;
+  }
+
+  .form-item input:focus + .label-name .content-name, 
+  .form-item input:valid + .label-name .content-name{ 
+      transform: translateY(-150%);
+      font-size: 14px;
+      color: black;
+  }
+
+  .form-item input:focus + .label-name::after, .form input:valid + .label-name::after{
+      transform: translateX(0%);
+  }
+
+  .message-item{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+  }
+
+  textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    resize: none;
+    width: 25vw;
+}
+
+.contact-wrapper{
+    display: flex;
+  justify-content: space-evenly;
+  
+  }
+  
+  .contact-image img{
+    margin-top: 50px;
+    width: 30vw;
+    height: 70vh;
+  }
+  
+  .contact-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    color: $main-color;
+  }
+
+  .form-buttons-wrapper {
+      display: flex;
+      justify-content: space-evenly;
+  }
+
+  .cancel-button {
+    @include button;
+
+    &:hover{
+        transition: 0.5s ease;
+        background-color: rgb(133, 49, 49);
+        color: white;
+    }
+  }
+
+  .submit-button {
+    @include button;
+
+    &:hover{
+        transition: 0.5s ease;
+        background-color: $main-color;
+        color: white;
+    }
   }

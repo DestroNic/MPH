@@ -8,3 +8,12 @@
     color: $main-color;
     font-weight: unset;
 }
+
+@mixin button {
+    outline: none;
+    width: 250px;
+    height: 70px;
+    background-color: white;
+    font-size: 1em;
+    transition: background-color 0.4s ease;
+}
