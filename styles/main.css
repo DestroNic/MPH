@@ -141,9 +141,8 @@
 }
 
 .card h2 {
-  font-size: 40px;
   color: #0054A5;
-  font-weight: unset;
+  text-align: center;
 }
 
 .card i {
@@ -216,6 +215,18 @@
   .card-wrapper {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
+  }
+  .contact-image {
+    display: none;
+  }
+  .contact-wrapper {
+    height: 60vh;
+  }
+  #message {
+    width: 100%;
+  }
+  .contact-container, .message-item {
+    width: 80%;
   }
 }
 
@@ -322,8 +333,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -423,6 +435,8 @@ textarea {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  height: 75vh;
+  overflow: hidden;
 }
 
 .contact-image img {
