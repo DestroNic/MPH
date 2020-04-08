@@ -549,6 +549,9 @@ textarea {
             justify-content: center;
     margin: 20px auto;
   }
+  .card-container {
+    margin: 10px auto;
+  }
 }
 
 @media only screen and (max-width: 1105px) {
