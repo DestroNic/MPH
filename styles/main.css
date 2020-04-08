@@ -136,7 +136,7 @@
 
 .card-container {
   width: 290px;
-  height: 400px;
+  height: 350px;
   background: none;
 }
 
@@ -182,8 +182,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   background-color: white;
 }
 
@@ -510,7 +511,7 @@ textarea {
           align-items: center;
   opacity: 0.7;
   height: 100px;
-  width: 170px;
+  width: 100%;
 }
 
 .tech-logos h3 {
