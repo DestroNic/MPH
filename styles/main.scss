@@ -472,6 +472,10 @@
     .card-container {
         margin: 10px auto;
     }
+
+    .background img {
+        width: 65%;
+    }
   }
 
   @media only screen and (max-width: 1105px) {
@@ -482,6 +486,10 @@
     .content {
         display: flex;
         flex-direction: column;
+    }
+
+    .background img {
+        width: 80%;
     }
   }
 
@@ -504,6 +512,10 @@
     .tech {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .background img {
+        width: 100%;
     }
   }
 
@@ -532,13 +544,13 @@
 
   @media screen and (max-height: 817px) {
     .logo img {
-        top: 100px;
+        top: 190px;
     }
   }
 
   @media screen and (max-height: 561px) {
     .logo img {
-        top: 50px;
+        top: 145px;
         width: 250px;
     }
   }
