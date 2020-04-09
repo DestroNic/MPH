@@ -9,7 +9,9 @@
 .header {
   height: 60vh;
   overflow: hidden;
-  background: #2e3033;
+  background-image: url("../assets/images/network.gif");
+  opacity: 0.7;
+  z-index: -1;
 }
 
 .background, .logo {
@@ -29,10 +31,12 @@
 }
 
 .background {
+  opacity: 0.5;
   -webkit-animation: spin 120s linear infinite;
           animation: spin 120s linear infinite;
   overflow: initial;
   width: 100%;
+  z-index: 1;
 }
 
 @-webkit-keyframes spin {
@@ -55,6 +59,7 @@
   position: absolute;
   top: 250px;
   width: 500px;
+  z-index: 5;
 }
 
 .body-content {
